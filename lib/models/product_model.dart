@@ -52,28 +52,28 @@ class Product {
   ];
 }
 
-class Bannar {
-  final String shape;
-  final String describtion;
+// class Bannar {
+//   final String shape;
+//   final String describtion;
 
-  Bannar({required this.shape, required this.describtion});
+//   Bannar({required this.shape, required this.describtion});
 
-  static List<Bannar> shapes = [
-    Bannar(
-      shape: 'assets/sapes/shape1.svg',
-      describtion: 'Fast shipping. Free\non orders over \$25.',
-    ),
-    Bannar(
-      shape: 'assets/sapes/shape2.svg',
-      describtion: 'Sustainable process\nfrom start to finish.',
-    ),
-    Bannar(
-      shape: 'assets/sapes/shape3.svg',
-      describtion: 'Unique designs\nand high-quality materials.',
-    ),
-    Bannar(
-      shape: 'assets/sapes/shape4.svg',
-      describtion: 'Fast shipping.\nFree on orders over \$25.',
-    ),
-  ];
-}
+//   static List<Bannar> shapes = [
+//     Bannar(
+//       shape: 'assets/sapes/shape1.svg',
+//       describtion: 'Fast shipping. Free\non orders over \$25.',
+//     ),
+//     Bannar(
+//       shape: 'assets/sapes/shape2.svg',
+//       describtion: 'Sustainable process\nfrom start to finish.',
+//     ),
+//     Bannar(
+//       shape: 'assets/sapes/shape3.svg',
+//       describtion: 'Unique designs\nand high-quality materials.',
+//     ),
+//     Bannar(
+//       shape: 'assets/sapes/shape4.svg',
+//       describtion: 'Fast shipping.\nFree on orders over \$25.',
+//     ),
+//   ];
+// }

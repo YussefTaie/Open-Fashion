@@ -7,7 +7,7 @@ import 'package:openfashion/shared/themes/app_colors.dart';
 class Appbar extends StatefulWidget implements PreferredSizeWidget {
   const Appbar({super.key});
   @override
-  Size get preferredSize => const Size.fromHeight(80.0);
+  Size get preferredSize => const Size.fromHeight(70.0);
   @override
   State<Appbar> createState() => _AppbarState();
 }
@@ -16,7 +16,7 @@ class _AppbarState extends State<Appbar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: AppBar(
         backgroundColor: AppColors.backgroundcolor,
         elevation: 0,

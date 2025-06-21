@@ -37,6 +37,24 @@ class _HomepageState extends State<Homepage> {
     'Autumncollection',
     'Openfashion',
   ];
+  List shapes = [
+    {
+      'shape': 'assets/sapes/shape1.png',
+      'subTitle': 'Fast shipping. Free\non orders over \$25.',
+    },
+    {
+      'shape': 'assets/sapes/shape2.png',
+      'subTitle': 'Sustainable process\nfrom start to finish.',
+    },
+    {
+      'shape': 'assets/sapes/shape3.png',
+      'subTitle': 'Unique designs\nand high-quality materials.',
+    },
+    {
+      'shape': 'assets/sapes/shape4.png',
+      'subTitle': 'Fast shipping.\nFree on orders over \$25.',
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +131,7 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
-            Gap(35),
+            Gap(16),
             SizedBox(
               height: 40,
               width: 350,
@@ -365,7 +383,7 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             Container(
-              height: 500,
+              height: 730,
               width: double.infinity,
               decoration: BoxDecoration(color: AppColors.offWhite),
               child: Padding(
@@ -385,9 +403,41 @@ class _HomepageState extends State<Homepage> {
                     Gap(12),
                     SvgPicture.asset('assets/icons/line.svg', width: 180.0),
                     Gap(40),
+                    SizedBox(
+                      height: 400,
+                      child: GridView.count(
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        crossAxisCount: 2,
+                        physics: NeverScrollableScrollPhysics(),
+                        children: [
+                          for (int i = 0; i < shapes.length; i++)
+                            Column(
+                              children: [
+                                Image.asset(shapes[i]['shape'], width: 100),
+                                Gap(10),
+                                CustomText(
+                                  text: shapes[i]['subTitle'],
+                                  size: 16.0,
+                                  color: AppColors.darckGray,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                        ],
+                      ),
+                    ),
+                    Image.asset('assets/sapes/shape5.png', width: 100),
                   ],
                 ),
               ),
+            ),
+            Gap(32),
+            CustomText(
+              text: 'Follow Us'.toUpperCase(),
+              size: 24.0,
+              color: AppColors.black0,
+              space: 4,
             ),
 
             Gap(35),

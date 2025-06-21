@@ -65,6 +65,7 @@ flutter:
     - assets/images/
     - assets/logo/
     - assets/text/
+    - assets/sapes/
 
 
   fonts:
