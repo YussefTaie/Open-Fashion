@@ -61,7 +61,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: AppColors.backgroundcolor,
 
-      appBar: Appbar(),
+      appBar: const Appbar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -439,8 +439,148 @@ class _HomepageState extends State<Homepage> {
               color: AppColors.black0,
               space: 4,
             ),
+            Gap(16),
+            InkWell(
+              onTap: () {},
+              child: SvgPicture.asset(
+                'assets/icons/instagramoutline.svg',
+                width: 40,
+              ),
+            ),
+            Gap(32),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: Accounts.acc.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 0.90,
+                ),
+                itemBuilder: (context, index) {
+                  final account = Accounts.acc[index];
+                  return Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Positioned(child: Image.asset(account.image)),
+                      Container(
+                        width: 185,
+                        height: 185,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              // ignore: deprecated_member_use
+                              Colors.black.withOpacity(0.6),
+                              Colors.transparent,
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 16,
+                        left: 10,
+                        child: CustomText(
+                          text: account.account,
+                          size: 18.0,
+                          color: AppColors.whte,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
 
-            Gap(35),
+            Gap(60),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/icons/twitter.svg', width: 32),
+                  Gap(45),
+                  SvgPicture.asset('assets/icons/instagram.svg', width: 32),
+                  Gap(45),
+                  SvgPicture.asset('assets/icons/youtube.svg', width: 32),
+                ],
+              ),
+            ),
+            Gap(32),
+            SvgPicture.asset('assets/icons/line.svg', width: 180.0),
+            Gap(18),
+            Center(
+              child: Column(
+                children: [
+                  CustomText(
+                    text: 'support@openui.design',
+                    size: 18,
+                    color: AppColors.black,
+                  ),
+                  Gap(8),
+                  CustomText(
+                    text: '+60 825 876',
+                    size: 18,
+                    color: AppColors.black,
+                  ),
+                  Gap(8),
+                  CustomText(
+                    text: '08:00 - 22:00 - Everyday',
+                    size: 18,
+                    color: AppColors.black,
+                  ),
+                ],
+              ),
+            ),
+            Gap(18),
+            SvgPicture.asset('assets/icons/line.svg', width: 180.0),
+            Gap(32),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomText(
+                    text: 'About',
+                    size: 20,
+                    color: AppColors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  Gap(48),
+                  CustomText(
+                    text: 'Contact',
+                    size: 20,
+                    color: AppColors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  Gap(48),
+                  CustomText(
+                    text: 'Blog',
+                    size: 20,
+                    color: AppColors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ],
+              ),
+            ),
+            Gap(24),
+            Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(color: AppColors.offWhite),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomText(
+                    text: 'Copyright© OpenUI All Rights Reserved.',
+                    size: 14,
+                    color: AppColors.darckGray,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

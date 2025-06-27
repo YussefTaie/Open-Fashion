@@ -52,28 +52,15 @@ class Product {
   ];
 }
 
-// class Bannar {
-//   final String shape;
-//   final String describtion;
+class Accounts {
+  final String image;
+  final String account;
+  Accounts({required this.image, required this.account});
 
-//   Bannar({required this.shape, required this.describtion});
-
-//   static List<Bannar> shapes = [
-//     Bannar(
-//       shape: 'assets/sapes/shape1.svg',
-//       describtion: 'Fast shipping. Free\non orders over \$25.',
-//     ),
-//     Bannar(
-//       shape: 'assets/sapes/shape2.svg',
-//       describtion: 'Sustainable process\nfrom start to finish.',
-//     ),
-//     Bannar(
-//       shape: 'assets/sapes/shape3.svg',
-//       describtion: 'Unique designs\nand high-quality materials.',
-//     ),
-//     Bannar(
-//       shape: 'assets/sapes/shape4.svg',
-//       describtion: 'Fast shipping.\nFree on orders over \$25.',
-//     ),
-//   ];
-// }
+  static List<Accounts> acc = [
+    Accounts(image: 'assets/images/acc1.png', account: '@mai'),
+    Accounts(image: 'assets/images/acc2.png', account: '@_jihyn'),
+    Accounts(image: 'assets/images/acc3.png', account: '@mai'),
+    Accounts(image: 'assets/images/acc4.png', account: '@_jihyn'),
+  ];
+}
